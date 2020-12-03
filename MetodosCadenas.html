@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos y  propiedades para cadenas de texto</title>
+</head>
+<body>
+
+<script>
+
+ var nombre='alejandra';
+//--- . length  calcula cuantos caracteres tiene el nombre  y lo guardara en la variable
+var numeroCaracteres= nombre.length;
+//console.log(nombre + ' tiene ' + numeroCaracteres+' caracteres');
+
+//----substring: nos permite extraer parte de una cadena de texto, el primer parametro es desde donde empezaremos a extraer caracteres y el segundo, en donde terminara la extracción
+//var segundoNombre= nombre.substring(3, 6);
+//console.log(segundoNombre);
+
+//--- Substr: funciona similar a substring, el primer parametro es desde donde empezamos y el segundo cuantos caractes queremos extraer
+var segundoNombre= nombre.substr(5, 5);
+//console.log(segundoNombre);
+
+
+//------- Replace nos permite remplazar partes de una cadena de texto, el primer parametro es la palabra que queremos cambiar y el segundo la palabra por la cual vamos a remplazar
+
+//var nombreNuevo= nombre.replace('alejan','maria')
+//console.log(nombreNuevo);
+
+// mayusculas
+
+//nombre= nombre.toUpperCase();
+//console.log(nombre);
+//forma 2 y mas util :
+
+//console.log(nombre.toUpperCase());
+
+
+// minusculas
+
+nombreMinus= nombre.toLowerCase();
+console.log(nombreMinus);
+//forma 2 y mas util :
+
+console.log(nombreMinus.toLowerCase());
+
+//buscar la primera ocurrencia de una letra en una cadena de texto
+var posicion=nombre.indexOf('r');
+console.log(posicion);
+//nos permite encontrar la  letra en la cadena de texto pero empezando desde el final 
+var posicionLlast=nombre.lastIndexOf('j');
+console.log(posicionLlast);
+
+
+
+
+//--------------substring: permite optener un número de caracteres del
+</script> 
+
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time out</title>
+</head>
+<body>
+    
+    <button id="btn-iniciar">Iniciar</button>
+    <button id="btn-detener">Detener</button>
+
+    <script>
+
+       
+        function  saludo(){
+            alert('hola mundo');
+        }
+         /*---------------timeout: permite ejecutar x funcion despues de determinado tiempo 
+          document.getElementById('btn-iniciar').addEventListener('click',function(){
+             setTimeout(saludo, 3000); // primer parametro que recibe es la funcion que queremos ejecutar y el segundo, el tiempo en milisegundos
+          });
+
+      // limpiar el timeout
+      function  saludo(){
+            alert('hola mundo');
+        }
+       
+        var   tiempo =setTimeout(saludo, 3000); 
+        clearTimeout(tiempo);
+    
+*/
+
+//-------------------- setInterval()*  permite agregar intervalos de tiempo
+
+      //  setInterval(saludo, 3000); se va  a ejecutar de forma infinita
+
+      var intervalo= setInterval(saludo, 3000);
+    document.getElementById('btn-detener').addEventListener('click',function(){
+         clearInterval(intervalo);
+    })
+
+    </script>
+</body>
+</html>

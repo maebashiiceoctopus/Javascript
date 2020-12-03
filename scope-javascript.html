@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope de Javascript</title>
+</head>
+<body>
+
+    <!---Alcance de nuestras variables -->
+<script>
+    //-----------las variables pueden ser de tipo global o de tipo local 
+    //--- ----------variables locales creadas dentro de una funcion y solo se puede acceder en ellas
+
+  //  function saludo(){
+    //    var texto= 'hola mundo';
+  //  console.log(texto);
+  //  } 
+
+   // saludo();
+
+//---------------variable local con funciones anidadas 
+//--- el scope de javascript funciona por niveles de adentro hacia afuera, no se puede de afuera hacia adentro                                   
+
+ //function saludo(){
+  //   var texto='hola mundo';
+
+  //   function mensaje(){
+  //       console.log(texto);
+
+  //   }
+ //    mensaje();
+ //}
+ //saludo();
+
+
+ //----------- variables globales: pueden ser accedidas desde cualquier parte o funcion 
+ // si se declara fuera de una funcion es global
+
+
+/*  var texto= 'hola mundo'
+ function saludo(){
+     console.log(texto);
+ }
+ saludo(); */
+
+//----------- IMPORTANTE
+// si a nuestra variable que se encuentra dentro de una funcion, le quitamos la palabra VAR esta se convierte en una funcion global y se podra acceder desde cualquier parte.
+/* function saludo() {
+    mensaje='hola mundo'; 
+
+}
+saludo();
+console.log(mensaje);
+ */
+
+ // como proteger nuestras variables de codigo de terceros
+ // funciones autoinvocadas
+
+(function(){
+    // el codigo aqui no podra ser accedido por codigo de terceros, plugins etc, es una forma de protegerse
+    //la consola tampoco podra acceder a nuestras variables 
+
+
+}())
+//console.log(mensaje);  <--- no podra acceder a nuestra funcion
+</script>
+
+
+    
+</body>
+</html>

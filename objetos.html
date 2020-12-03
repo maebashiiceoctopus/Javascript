@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <script>    
+ /*   // un objeto es una variable que puede contener muchos valores
+    //un objeto nos permite guardar pares de valores
+    
+        var carlos= {
+            nombre:'Carlos', // valor par o propiedades
+            edad:20,
+            pais:'mexico', // el ultimo valor no lleva coma
+            bio: function(){ /// podemos agregar funciones dentro de nuestro objeto
+                return this.nombre + ' Tiene  '+  this.edad +' Años';
+            }
+
+        };
+    
+    //accedemos a nuestro elemento 
+     document.write(carlos.bio());*/
+
+     //-------------- constructor de objetos: nos permite crear objetos conforme lo necesitamos------
+
+     function persona (nombre, edad, pais){
+        this.nombre = nombre;
+        this.edad = edad;
+        this.pais = pais;
+
+     }
+
+     // estoy guardando en papa, y padre es el nuevo objeto 
+      var papa= new persona('arturo', 35, 'españa');
+
+      var amigo= new persona('Lola',9, 'España');
+    
+    document.write(papa.nombre);
+    document.write('<br>');
+    document.write(amigo.nombre)
+    </script>
+</body>
+</html>

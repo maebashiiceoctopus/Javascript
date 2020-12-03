@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio y video</title>
+</head>
+<body>
+    
+    <video src="media/video.mp4" id="video" width="500" controls>
+    <p>tu navegador no soporta videos en html5, por favor actualizalo</p>
+</video>
+<br>
+
+<audio src="media/bensound-ukulele.mp3" id="video" controls>
+    <p>tu navegador no soporta audios en html5, por favor actualizalo</p>
+</audio>
+<br>
+
+<button id="play">Reproducir</button>
+<button id="pause">Pause</button>
+
+<input type="range" value="1" min="0" max="1" step="0.1" id="volumen">
+
+
+<script>
+    var video =document.getElementById('video'),
+     btnPlay = document.getElementById('play') ,
+     btnPause= document.getElementById('pause'),
+     volumen= document.getElementById('volumen');
+
+     btnPlay.addEventListener('click',function(){
+      video.play();
+     });
+     
+     btnPause.addEventListener('click',function(){
+        video.pause();
+     });
+
+     volumen.addEventListener('change',function(){
+        video.volume= volumen.value;
+     });
+// propiedades
+// video.currentTime- regresa el tiempo actual en el que va el vídeo
+//video.duration- regresa la duracion del video
+//video.ended - regresa si el video ya termino
+
+
+//-- eventos 
+/* play
+pause
+*/
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+.caja {
+
+    width:200px;
+    height: 200px;
+    cursor: pointer;
+    background: palevioletred;
+    margin: 10px;
+    display: inline-block;
+    
+}
