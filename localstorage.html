@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+
+    <script>    
+    //local storage nos permite guardar informacion en la computadora del usuario que visita nuestra web, es como una pequeña base de datos que podremos utilizar más adelante.
+
+
+    // comprobamos que el usuario tenga soporte a local Storage
+
+    //typeof(Storage)
+
+  if(typeof(Storage) !=="undefined"){
+        localStorage.setItem('nombre','valor-carlos');
+        document.write("si soporta");
+    }else{
+        document.write("tu navegador no soporta local storage");
+    }
+
+// acceder al valor que almacenamos en el ordenador del usuario
+ /*
+ document.write(localStorage.nombre);
+*/
+
+//borrar el dato
+/* localStorage.removeItem('nombre');*/
+
+//-------------- session storage: se borra si el usuario cierra el navegador 
+
+//sessionStorage.nombre="carlos";
+
+//document.write(sessionStorage.nombre)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
